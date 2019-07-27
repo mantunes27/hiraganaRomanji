@@ -3,14 +3,12 @@ var latinAlphabet = ["a","i","u","e","o","ba","bi","bu","be","bo","da","di","du"
 
 var wordOutput = "";
 //dummy data for now
-var wordInput = "あか";
-
-//Create sokuon method (double consonent) っ
+var wordInput = "あっか";
 
 for(i = 0; i < wordInput.length; i++)
     {
     if(wordInput[i] == "っ" || wordInput[i] == "つ"){
-        sokuonProcessing(wordInput,i);
+        wordOutput += sokuonProcessing(wordInput,i);
     }
     else
     {
@@ -20,20 +18,18 @@ for(i = 0; i < wordInput.length; i++)
 
 console.log(wordOutput);
 
-
-
 function translate(char){
     var index = hiraganaAlphabet.indexOf(char);
     return latinAlphabet[index];
 }
 
-function sokuonProcessing(wordInput,i){
-    //identifies sokuon
-    //gets char from array position plus 1
-    //return it
-
-    //replace wordInput variable with latin alphabet array
-    var output = wordInput[i+1];
-    console.log(output);
+function sokuonProcessing(char,i){
+    //gets the index of the character to be translated
+    //Converts the string to an array, so the consonant is duplicated
+    var hiraganaIndex = hiraganaAlphabet.indexOf(char[i+1]);
+    
+    var latinIndex = latinAlphabet[hiraganaIndex];
+    var temp = latinIndex.split("");
+    var output = temp[0];
     return output;
 }
