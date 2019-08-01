@@ -1,40 +1,35 @@
-var hiraganaVowels = ["あ","い","う","え" ,"お"];
-var latinVowels = ["a","i","u","e","o"];
-var hiraganaConsonants = ["ば","び","ぶ","べ","ぼ","だ","ぢ","づ","で","ど","が","ぎ","ぐ","げ","ご","は","ひ","ふ","へ","ほ"];
-var latinConsonants = ["ba","bi","bu","be","bo","da","di","du","de","do","ga","gi","gu","ge","go","ha","hi","fu","he","ho"];
+var hiraganaAlphabet = ["あ","い","う","え" ,"お","ば","び","ぶ","べ","ぼ","だ","ぢ","づ","で","ど","が","ぎ","ぐ","げ","ご","は","ひ","ふ","へ","ほ","か","き","く","け","こ","ま","み","む","め","も","ん","ぱ","ぴ","ぷ","ぺ","ぽ","ら","り","る","れ","ろ","さ","し","す","せ","そ","た","ち","つ","て","と","や","ゆ","よ","わ","ゐ","ゑ","を","ざ","じ","ず","ぜ","ぞ"];
+var latinAlphabet = ["a","i","u","e","o","ba","bi","bu","be","bo","da","di","du","de","do","ga","gi","gu","ge","go","ha","hi","fu","he","ho","ka","ki","ku","ke","ko","ma","mi","mu","me","mo","n","pa","pi","pu","pe","po","ra","ri","ru","re","ro","sa","si","su","se","so","ta","ti","tu","te","to","ya","yu","yo","wa","wi","we","wo","za","zi","zu","ze","zo"];
 
 var wordOutput = "";
 //dummy data for now
-var wordInput = "っあああ";
-
-//Create array for english and another array for hiragana
-//Create sokuon method (double consonent) っ
-//k,m,n,p,r,s,t,y,w,z
+var wordInput = "あっか";
 
 for(i = 0; i < wordInput.length; i++)
     {
     if(wordInput[i] == "っ" || wordInput[i] == "つ"){
-        sokuonProcessing(wordInput,i);
+        wordOutput += sokuonProcessing(wordInput,i);
     }
     else
     {
-         wordOutput += translate(wordInput,i);
+         wordOutput += translate(wordInput[i]);
     }
 }
 
+console.log(wordOutput);
 
-
-function translate(wordInput){
-    
+function translate(char){
+    var index = hiraganaAlphabet.indexOf(char);
+    return latinAlphabet[index];
 }
 
-function sokuonProcessing(wordInput,i){
-    //identifies sokuon
-    //gets char from array position plus 1
-    //return it
-
-    //replace wordInput variable with latin alphabet array
-    var output = wordInput[i+1];
-    console.log(output);
+function sokuonProcessing(char,i){
+    //gets the index of the character to be translated
+    //Converts the string to an array, so the consonant is duplicated
+    var hiraganaIndex = hiraganaAlphabet.indexOf(char[i+1]);
+    
+    var latinIndex = latinAlphabet[hiraganaIndex];
+    var temp = latinIndex.split("");
+    var output = temp[0];
     return output;
 }
