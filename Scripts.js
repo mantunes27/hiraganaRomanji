@@ -1,9 +1,11 @@
+function hiraganaTranslator(wordInput){
+
 var hiraganaAlphabet = ["あ","い","う","え" ,"お","ば","び","ぶ","べ","ぼ","だ","ぢ","づ","で","ど","が","ぎ","ぐ","げ","ご","は","ひ","ふ","へ","ほ","か","き","く","け","こ","ま","み","む","め","も","ん","ぱ","ぴ","ぷ","ぺ","ぽ","ら","り","る","れ","ろ","さ","し","す","せ","そ","た","ち","つ","て","と","や","ゆ","よ","わ","ゐ","ゑ","を","ざ","じ","ず","ぜ","ぞ"];
 var latinAlphabet = ["a","i","u","e","o","ba","bi","bu","be","bo","da","di","du","de","do","ga","gi","gu","ge","go","ha","hi","fu","he","ho","ka","ki","ku","ke","ko","ma","mi","mu","me","mo","n","pa","pi","pu","pe","po","ra","ri","ru","re","ro","sa","si","su","se","so","ta","ti","tu","te","to","ya","yu","yo","wa","wi","we","wo","za","zi","zu","ze","zo"];
 
 var wordOutput = "";
 //dummy data for now
-var wordInput = "あっか";
+//var wordInput = "あっか";
 
 for(i = 0; i < wordInput.length; i++)
     {
@@ -15,8 +17,8 @@ for(i = 0; i < wordInput.length; i++)
          wordOutput += translate(wordInput[i]);
     }
 }
+    return wordOutput;
 
-console.log(wordOutput);
 
 function translate(char){
     var index = hiraganaAlphabet.indexOf(char);
@@ -33,3 +35,6 @@ function sokuonProcessing(char,i){
     var output = temp[0];
     return output;
 }
+}
+
+console.log(hiraganaTranslator("あっか"));
