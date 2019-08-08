@@ -1,9 +1,6 @@
 function hiraganaTranslator(){
 
     //takes text box input string
-    //delete TEST input
-    //var testInput = "ああ あ";
-    //var wordInput = testInput.replace(/ /g,'');
     var rawInput = document.getElementById("word").value;
     var wordInput = rawInput.replace(/ /g,'');
     console.log(wordInput)
