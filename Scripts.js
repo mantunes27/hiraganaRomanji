@@ -10,7 +10,7 @@ function hiraganaTranslator(){
     
     for(i = 0; i < wordInput.length; i++){
         if(!isInArray(wordInput[i], hiraganaAlphabet)){
-            document.getElementById("demo").innerHTML = "Character " + wordInput[i] + "is not valid";
+            document.getElementById("demo").innerHTML = "Character " + wordInput[i] + " is not valid";
             return false;
         }
     }
