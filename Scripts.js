@@ -9,7 +9,7 @@ function hiraganaTranslator(){
     var latinAlphabet = ["a","i","u","e","o","ba","bi","bu","be","bo","da","di","du","de","do","ga","gi","gu","ge","go","ha","hi","fu","he","ho","ka","ki","ku","ke","ko","ma","mi","mu","me","mo","n","pa","pi","pu","pe","po","ra","ri","ru","re","ro","sa","si","su","se","so","ta","ti","tu","te","to","ya","yu","yo","wa","wi","we","wo","za","zi","zu","ze","zo"];
     
     for(i = 0; i < wordInput.length; i++){
-        if(!hiraganaAlphabet.includes(wordInput[i])){
+        if(!isInArray(wordInput[i], hiraganaAlphabet)){
             document.getElementById("demo").innerHTML = "Character " + wordInput[i] + "is not valid";
             return false;
         }
@@ -47,4 +47,8 @@ function hiraganaTranslator(){
         var output = temp[0];
         return output;
     }
-    }
+
+    function isInArray(value, array) {
+        return array.indexOf(value) > -1;
+      }
+}
