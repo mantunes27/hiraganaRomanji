@@ -3,7 +3,11 @@
 <body>
 
   <input type="radio" name="hiraganaRadio" value="Hiragana" checked> Hiragana<br>
+  <input type="radio" value="Uncheck" onclick="document.getElementByName('hiraganaRadio').checked = false">
+
   <input type="radio" name="katakanaRadio" value="Katakana"> Katakana<br>
+  <input type="radio" value="Uncheck" onclick="document.getElementByName('katakanaRadio').checked = false">
+
   <input id="word">
 
   <button type="button" onclick="hiraganaTranslator()">Submit</button>
