@@ -1,3 +1,18 @@
+function translate(){
+    var radioButtons = document.getElementsByName("group1");
+    for(var i = 0; i < radioButtons.length; i++){
+        if(radioButtons[0].checked == true){
+            hiraganaTranslator();
+        }
+        else if(radioButtons[1].checked == true){
+            katakanaTranslator();
+        }
+        else{
+            return false;
+        }
+    }
+}
+
 function hiraganaTranslator(){
 
     //takes text box input string
