@@ -94,7 +94,7 @@ function katakanaTranslator(){
     document.getElementById("demo").innerHTML = wordOutput;
 
     function translateKatakana(char){
-        var index = hiraganaAlphabet.indexOf(char);
+        var index = katakanaAlphabet.indexOf(char);
         return latinAlphabet[index];
     }
 }
