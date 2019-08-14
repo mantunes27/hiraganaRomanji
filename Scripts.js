@@ -29,7 +29,7 @@ function hiraganaTranslator(){
     }
     var wordOutput = "";
     //dummy data for now
-    //var wordInput = "あっか";
+    //var wordInput = "あつか";
     
     for(i = 0; i < wordInput.length; i++)
         {
