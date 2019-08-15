@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html>
+    <link rel="stylesheet" href="main.css">
+
+<img src="https://d3hg7snzn13jf0.cloudfront.net/files/allabout/197/197--6aa89d928da447d4a85ee0947140e366.jpg"></img>
 <body>
+  <h1>Hiragana / Katakana > Romanji</h1>
+  <h1>ひらがな / カタカナ > ローマ字 </h1>
 <form>
 
 <fieldset id="group1">
-  <input type="radio" value="Hiragana" name="group1">Hiragana
-  <input type="radio" value="Katakana" name="group1">Katakana
+  <input type="radio" value="Hiragana" name="group1" class="HiraganaText"><span class="spanClassname">Hiragana</span></br>
+  <input type="radio" value="Katakana" name="group1" class="KatakanaText"><span class="spanClassname">Katakana</span> </br>
 </fieldset>
-
   <input id="word">
 
   <button type="button" onclick="translate()">Submit</button>
     
-  <p id="demo"></p>
+  <h3 id="demo"></h3>
 </form>
   <script type="text/javascript" src="Scripts.js"></script>
   <script>translate()</script>
