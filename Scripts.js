@@ -68,8 +68,8 @@ function katakanaTranslator(){
     var wordInput = rawInput.replace(/ /g,'');
     console.log(wordInput)
 
-    var katakanaAlphabet = ["ア","イ","ウ","エ", "オ","バ","ビ","ブ","ベ","ボ", "ダ","ヂ","ヅ","デ","ド",  "ガ","ギ","グ","ゲ","ゴ",  "ハ","ヒ","フ","ヘ","ホ", "カ","キ","ク","ケ","コ",  "マ","ミ","ム","メ","モ", "ン", "ナ","ニ","ヌ","ネ","ノ","モ","パ","ピ","プ","ペ","ポ","ラ","リ","ル","レ","ロ","サ","シ","ス","セ","ソ","タ","チ","ツ","テ","ト","ヤ","ユ","ヨ","ワ","ヰ","ヱ","ヲ","ザ","ジ","ズ","ゼ","ゾ"];
-    var latinAlphabet =    ["a","i","u","e","o", "ba","bi","bu","be","bo",    "da","di","du","de","do", "ga","gi","gu","ge","go", "ha","hi","fu","he","ho", "ka","ki","ku","ke","ko", "ma","mi","mu","me","mo","n", "na","ni","nu","ne","no","pa","pi","pu","pe","po","ra","ri","ru","re","ro","sa","si","su","se","so","ta","ti","tu","te","to","ya","yu","yo","wa","wi","we","wo","za","zi","zu","ze","zo"];
+    var katakanaAlphabet = ["ア","イ","ウ","エ", "オ","バ","ビ","ブ","ベ","ボ", "ダ","ヂ","ヅ","デ","ド",  "ガ","ギ","グ","ゲ","ゴ",  "ハ","ヒ","フ","ヘ","ホ", "カ","キ","ク","ケ","コ",  "マ","ミ","ム","メ","モ", "ン", "ナ","ニ","ヌ","ネ","ノ",  "パ","ピ","プ","ペ","ポ", "ラ","リ","ル","レ","ロ", "サ","シ","ス","セ","ソ",  "タ","チ","ツ","テ","ト", "ヤ","ユ","ヨ", "ワ","ヰ","ヱ","ヲ",  "ザ","ジ","ズ","ゼ","ゾ"];
+    var latinAlphabet =    ["a","i","u","e","o", "ba","bi","bu","be","bo",    "da","di","du","de","do", "ga","gi","gu","ge","go", "ha","hi","fu","he","ho", "ka","ki","ku","ke","ko", "ma","mi","mu","me","mo","n", "na","ni","nu","ne","no", "pa","pi","pu","pe","po", "ra","ri","ru","re","ro", "sa","si","su","se","so","ta","ti","tu","te","to","ya","yu","yo", "wa","wi","we","wo","za","zi","zu","ze","zo"];
     
     for(i = 0; i < wordInput.length; i++){
         if(!isInArray(wordInput[i], katakanaAlphabet)){
