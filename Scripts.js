@@ -18,8 +18,8 @@ function hiraganaTranslator(){
     var wordInput = rawInput.replace(/ /g,'');
     console.log(wordInput)
 
-    var hiraganaAlphabet = ["あ","い","う","え" ,"お","ば","び","ぶ","べ","ぼ","だ","ぢ","づ","で","ど","が","ぎ","ぐ","げ","ご","は","ひ","ふ","へ","ほ","か","き","く","け","こ","ま","み","む","め","も","ん","ぱ","ぴ","ぷ","ぺ","ぽ","ら","り","る","れ","ろ","さ","し","す","せ","そ","た","ち","つ","て","と","や","ゆ","よ","わ","ゐ","ゑ","を","ざ","じ","ず","ぜ","ぞ"];
-    var latinAlphabet = ["a","i","u","e","o","ba","bi","bu","be","bo","da","di","du","de","do","ga","gi","gu","ge","go","ha","hi","fu","he","ho","ka","ki","ku","ke","ko","ma","mi","mu","me","mo","n","pa","pi","pu","pe","po","ra","ri","ru","re","ro","sa","si","su","se","so","ta","ti","tu","te","to","ya","yu","yo","wa","wi","we","wo","za","zi","zu","ze","zo"];
+    var hiraganaAlphabet = ["あ","い","う","え" ,"お","ば","び","ぶ","べ","ぼ","だ","ぢ","づ","で","ど","が","ぎ","ぐ","げ","ご","は","ひ","ふ","へ","ほ","か","き","く","け","こ","ま","み","む","め","も","ん","な","に","ぬ","ね","の","ぱ","ぴ","ぷ","ぺ","ぽ","ら","り","る","れ","ろ","さ","し","す","せ","そ","た","ち","つ","て","と","や","ゆ","よ","わ","ゐ","ゑ","を","ざ","じ","ず","ぜ","ぞ"];
+    var latinAlphabet = ["a","i","u","e","o","ba","bi","bu","be","bo","da","di","du","de","do","ga","gi","gu","ge","go","ha","hi","fu","he","ho","ka","ki","ku","ke","ko","ma","mi","mu","me","mo","n","na","ni","nu","ne","no","pa","pi","pu","pe","po","ra","ri","ru","re","ro","sa","si","su","se","so","ta","ti","tu","te","to","ya","yu","yo","wa","wi","we","wo","za","zi","zu","ze","zo"];
     
     for(i = 0; i < wordInput.length; i++){
         if(!isInArray(wordInput[i], hiraganaAlphabet)){
@@ -68,8 +68,8 @@ function katakanaTranslator(){
     var wordInput = rawInput.replace(/ /g,'');
     console.log(wordInput)
 
-    var katakanaAlphabet = ["ア","イ","ウ","エ","オ","バ","ビ","ブ","ベ","ボ","ダ","ヂ","ヅ","デ","ド","ガ","ギ","グ","ゲ","ゴ","ハ","ヒ","フ","ヘ","ホ","カ","キ","ク","ケ","コ","マ","ミ","ム","メ","モ","ン","パ","ピ","プ","ペ","ポ","ラ","リ","ル","レ","ロ","サ","シ","ス","セ","ソ","タ","チ","ツ","テ","ト","ヤ","ユ","ヨ","ワ","ヰ","ヱ","ヲ","ザ","ジ","ズ","ゼ","ゾ"];
-    var latinAlphabet = ["a","i","u","e","o","ba","bi","bu","be","bo","da","di","du","de","do","ga","gi","gu","ge","go","ha","hi","fu","he","ho","ka","ki","ku","ke","ko","ma","mi","mu","me","mo","n","pa","pi","pu","pe","po","ra","ri","ru","re","ro","sa","si","su","se","so","ta","ti","tu","te","to","ya","yu","yo","wa","wi","we","wo","za","zi","zu","ze","zo"];
+    var katakanaAlphabet = ["ア","イ","ウ","エ","オ","バ","ビ","ブ","ベ","ボ","ダ","ヂ","ヅ","デ","ド","ガ","ギ","グ","ゲ","ゴ","ハ","ヒ","フ","ヘ","ホ","カ","キ","ク","ケ","コ","マ","ミ","ム","メ","ナ","ニ","ヌ","ネ", 	"ノ","モ","ン","パ","ピ","プ","ペ","ポ","ラ","リ","ル","レ","ロ","サ","シ","ス","セ","ソ","タ","チ","ツ","テ","ト","ヤ","ユ","ヨ","ワ","ヰ","ヱ","ヲ","ザ","ジ","ズ","ゼ","ゾ"];
+    var latinAlphabet = ["a","i","u","e","o","ba","bi","bu","be","bo","da","di","du","de","do","ga","gi","gu","ge","go","ha","hi","fu","he","ho","ka","ki","ku","ke","ko","ma","mi","mu","me","mo","n","na","ni","nu","ne","no","pa","pi","pu","pe","po","ra","ri","ru","re","ro","sa","si","su","se","so","ta","ti","tu","te","to","ya","yu","yo","wa","wi","we","wo","za","zi","zu","ze","zo"];
     
     for(i = 0; i < wordInput.length; i++){
         if(!isInArray(wordInput[i], katakanaAlphabet)){
